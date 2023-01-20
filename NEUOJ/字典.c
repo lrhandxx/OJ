@@ -25,7 +25,7 @@ Tree MakeEmpty()
 }
 pNode Insert(char* str, Tree t)
 {
-	int l=0;
+	int l = 0;
 	while (str[l] != '\0')
 	{
 		if (str[l] == 'A')
@@ -72,7 +72,7 @@ pNode Insert(char* str, Tree t)
 }
 int Find(char* str, Tree t)
 {
-	int l=0;
+	int l = 0;
 	while (str[l] != '\0')
 	{
 		if (str[l] == 'A')
@@ -101,7 +101,7 @@ int main(void)
 {
 	int n;
 	int i;
-	char command[10],str[20];
+	char command[10], str[20];
 	while (scanf("%d", &n) != EOF)
 	{
 		Tree t = MakeEmpty();
@@ -110,17 +110,17 @@ int main(void)
 		{
 			scanf("%s", command);
 			scanf("%s", str);
-			if (strcmp(command, "insert")==0)
+			if (strcmp(command, "insert") == 0)
 			{
 				Insert(str, t);
 			}
-			else if (strcmp(command, "find")==0)
+			else if (strcmp(command, "find") == 0)
 			{
 				if (Find(str, t) == 1) puts("yes");
 				else puts("no");
 			}
 		}
 	}
-	
+
 	return 0;
 }
